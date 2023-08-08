@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Music WebApp</title>
+    <link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="Style1.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="info" id="info">
+            <div class="trackname" id="trackname"></div>
+            <div class="artist" id="artist"></div>
+            <div class="trackimage" id="trackimage"></div>
+        </div>
+        <div class="buttons" id="buttons">
+            <div class="prevsong" id="prevsong" onclick="prevtrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playtrack" id="playtrack" onclick="playtrack()">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div> <!--Don't need to add event listeners manually in js this way-->
+            <div class="nextsong" id="nextsong" onclick="nexttrack()">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+        <div class="slider" id="slider">
+            <div class="currenttime" id="currenttime">00:00</div>
+            <input type="range" max="100" class="seekslider" id="seekslider" value="0" onchange="seekTO()">
+            <div class="duration" id="duration">00:00</div>
+        </div>
+        <div class="slider" id="slider">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" max="100" value="100" class="volume" id="volume" onchange="volumebar()">
+            <i class="fa fa-volume-up"></i>
+            </div>
+    </div>
+    <script src="../Task 3/Script1.js"></script>
+</body>
+</html>

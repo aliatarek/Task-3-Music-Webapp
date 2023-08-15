@@ -97,8 +97,7 @@ function prevtrack(){
 }
 
 function seekTO(){
-   let seekto = curr_track.duration * (seekslider.value / 100);
-
+    seekto = curr_track.duration * (seek_slider.value / 100);
     curr_track.currentTime = seekto;
 }
 
@@ -106,7 +105,7 @@ function seekupdate(){
     let seekposition=0;
   if (!isNaN(curr_track.duration)) {
     seekposition=curr_track.currentTime*(100/curr_track.duration)
-    //seekslider.value = seekposition;
+    seekslider.value = seekposition;
     let cminutes=Math.floor(curr_track.currentTime/60);
     let cseconds=Math.floor(curr_track.currentTime-cminutes*60);
     let totalm=Math.floor(curr_track.duration/60);
